@@ -1,7 +1,8 @@
-import React from 'react'   
+import React from 'react'  
+import {withRouter} from 'next/router'
 
 
-const Post = ({url: {query: {title}}}) => (
+const Post = ({router: {query: {title}}}) => (
     <>
         <h1>{title}</h1>
 
@@ -9,4 +10,4 @@ const Post = ({url: {query: {title}}}) => (
     </>
 )
 
-export default Post
+export default withRouter(Post)
